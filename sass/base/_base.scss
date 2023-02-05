@@ -1,0 +1,35 @@
+body {
+    background-color: #E7E7E7;
+    // font-family: 'Roboto';
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+ul {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+.img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.list {
+    list-style: none;
+}
+
+.button {
+    // font-family: inherit;
+    cursor: pointer;
+    border: none;
+}
