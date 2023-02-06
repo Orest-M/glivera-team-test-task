@@ -2,12 +2,13 @@
 @import './utils/visually-hidden';
 
 @import './base/base';
+@import './base/main-section';
+@import './base/customers';
 
 @import './components/logo';
-@import './components/user';
 @import './components/greeting';
 
-@import './layout/.menu';
+@import './layout/menu';
 @import './layout/customers-header';
 @import './layout/customers-main';
 @import './layout/customers-footer';

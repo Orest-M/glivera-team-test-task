@@ -1,0 +1,72 @@
+.main__customers-footer {
+  display: flex;
+  align-items: center;
+}
+
+.main__showing-data {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: -0.01em;
+  color: #B5B7C0;
+
+  margin-left: 38px;
+}
+
+.main__pagination {
+  display: flex;
+  gap: 12px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  margin-left: auto;
+  margin-right: 40px;
+}
+
+.main__pagination-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 9px;
+  gap: 10px;
+  width: 25px;
+  height: 24px;
+  background-color: #F5F5F5;
+  border: 1px solid #EEEEEE;
+  border-radius: 4px;
+
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: -0.01em;
+  color: #404B52;
+
+  transition: var(--primary-transition);
+
+  &:hover, &:focus {
+    background-color: var(--color-contrast);
+    border: 1px solid var(--color-contrast);
+    border-radius: 4px;
+    
+    color: #FFFFFF;
+  }
+}
+
+.main__pagination-btn_current {
+  background-color: var(--color-contrast);
+  border: 1px solid var(--color-contrast);
+  border-radius: 4px;
+
+  color: #FFFFFF;
+}
+
+.main__pagination-left-icon, .main__pagination-right-icon {
+  width: 8px;
+  height: 12px;
+  fill: #404B52;
+  transition: var(--primary-transition);
+
+  .main__pagination-btn:hover &, .main__pagination-btn:focus & {
+    fill: #FFFFFF;
+  }
+}

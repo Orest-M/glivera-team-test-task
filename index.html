@@ -5,68 +5,88 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
     <section class="main-section">
       <div class="menu">
         <nav class="menu__navigation">
-          <a href="index.html" class="menu__logo link">
-            <svg class="menu__logo-icon">
-              <use href="./images/sprite.svg#logo-icon"></use>
-            </svg>
-            <span class="menu__logo-text">Dashboard</span>
-            <span class="menu__logo-version">v.01</span>
-          </a>
+          <div class="menu__logo">
+            <a href="index.html" class="menu__logo-link link">
+              <svg class="menu__logo-icon">
+                <use href="./images/sprite.svg#logo-icon"></use>
+              </svg>
+              <p class="menu__logo-text">Dashboard</p>
+            </a>
+            <p class="menu__logo-version">v.01</p>
+          </div>
 
           <ul class="menu__list list">
             <li class="menu__list-item">
-              <a href="" class="link">
-                <svg><use href="./images/sprite.svg#dashboard-icon"></use></svg>
-                <p>Dashboard</p>
+              <a href="" class="menu__list-link link">
+                <svg class="menu__list-icon">
+                  <use href="./images/sprite.svg#dashboard-icon"></use>
+                </svg>
+                <p class="menu__list-text">Dashboard</p>
               </a>
             </li>
             <li class="menu__list-item">
-              <a href="" class="link">
-                <svg><use href="./images/sprite.svg#product-icon"></use></svg>
-                <p>Product</p>
-                <svg>
+              <a href="" class="menu__list-link link">
+                <svg class="menu__list-icon">
+                  <use href="./images/sprite.svg#product-icon"></use>
+                </svg>
+                <p class="menu__list-text">Product</p>
+                <svg class="menu__list-arrow">
+                  <use href="./images/sprite.svg#menu-arrow-icon"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="menu__list-item menu__list-item_pushed">
+              <a href="" class="menu__list-link link">
+                <svg class="menu__list-icon">
+                  <use href="./images/sprite.svg#customers-icon"></use>
+                </svg>
+                <p class="menu__list-text">Customers</p>
+                <svg class="menu__list-arrow">
                   <use href="./images/sprite.svg#menu-arrow-icon"></use>
                 </svg>
               </a>
             </li>
             <li class="menu__list-item">
-              <a href="" class="link">
-                <svg><use href="./images/sprite.svg#customers-icon"></use></svg>
-                <p>Customers</p>
-                <svg>
+              <a href="" class="menu__list-link link">
+                <svg class="menu__list-icon">
+                  <use href="./images/sprite.svg#income-icon"></use>
+                </svg>
+                <p class="menu__list-text">Income</p>
+                <svg class="menu__list-arrow">
                   <use href="./images/sprite.svg#menu-arrow-icon"></use>
                 </svg>
               </a>
             </li>
             <li class="menu__list-item">
-              <a href="" class="link">
-                <svg><use href="./images/sprite.svg#income-icon"></use></svg>
-                <p>Income</p>
-                <svg>
+              <a href="" class="menu__list-link link">
+                <svg class="menu__list-icon">
+                  <use href="./images/sprite.svg#promote-icon"></use>
+                </svg>
+                <p class="menu__list-text">Promote</p>
+                <svg class="menu__list-arrow">
                   <use href="./images/sprite.svg#menu-arrow-icon"></use>
                 </svg>
               </a>
             </li>
             <li class="menu__list-item">
-              <a href="" class="link">
-                <svg><use href="./images/sprite.svg#promote-icon"></use></svg>
-                <p>Promote</p>
-                <svg>
-                  <use href="./images/sprite.svg#menu-arrow-icon"></use>
+              <a href="" class="menu__list-link link">
+                <svg class="menu__list-icon">
+                  <use href="./images/sprite.svg#help-icon"></use>
                 </svg>
-              </a>
-            </li>
-            <li class="menu__list-item">
-              <a href="" class="link">
-                <svg><use href="./images/sprite.svg#help-icon"></use></svg>
-                <p>Help</p>
-                <svg>
+                <p class="menu__list-text">Help</p>
+                <svg class="menu__list-arrow">
                   <use href="./images/sprite.svg#menu-arrow-icon"></use>
                 </svg>
               </a>
@@ -75,14 +95,16 @@
         </nav>
 
         <div class="menu__user">
-          <a href="" class="link">
+          <a href="" class="menu__user-link link">
             <img
               class="menu__user-photo"
               src="./images/user-photo.png"
               alt="user-photo"
             />
-            <p class="menu__user-name">Evano</p>
-            <p class="menu__user-position">Project Manager</p>
+            <div class="menu__user-text">
+              <p class="menu__user-name">Evano</p>
+              <p class="menu__user-position">Project Manager</p>
+            </div>
           </a>
         </div>
       </div>
@@ -92,8 +114,10 @@
 
         <div class="main__customers">
           <div class="main__customers-header">
-            <h2 class="main__customers-title">All Customers</h2>
-            <p class="main__customers-active">Active Members</p>
+            <div class="main__customers-text">
+              <h2 class="main__customers-title">All Customers</h2>
+              <p class="main__customers-active">Active Members</p>
+            </div>
 
             <div class="main__customers-input-div">
               <input
@@ -108,195 +132,96 @@
           </div>
 
           <div class="main__customers-main">
-            <ul class="main__customers-column-names list">
-              <li class="main__customers-column-name-item">
-                <p>Customer Name</p>
-              </li>
-              <li class="main__customers-column-name-item">
-                <p>Company</p>
-              </li>
-              <li class="main__customers-column-name-item">
-                <p>Phone Number</p>
-              </li>
-              <li class="main__customers-column-name-item">
-                <p>Email</p>
-              </li>
-              <li class="main__customers-column-name-item">
-                <p>Country</p>
-              </li>
-              <li class="main__customers-column-name-item">
-                <p>Status</p>
-              </li>
-            </ul>
+            <table class="main__customers-table">
+              <thead>
+                <tr class="main__customers-table-titles">
+                  <th class="main__customers-table-title-name">
+                    Customer Name
+                  </th>
+                  <th class="main__customers-table-title-company">Company</th>
+                  <th class="main__customers-table-title-phone">
+                    Phone Number
+                  </th>
+                  <th class="main__customers-table-title-email">Email</th>
+                  <th class="main__customers-table-title-country">Country</th>
+                  <th class="main__customers-table-title-status">Status</th>
+                </tr>
+              </thead>
 
-            <ul class="main__customers-columns list">
-              <li class="main__customers-column-values">
-                <ul class="list">
-                  <li class="main__customers-column-item-value">
-                    <p>Jane Cooper</p>
-                  </li>
-                  <li class="main__customers-column-item-value">
-                    <p>Floyd Miles</p>
-                  </li>
-                  <li class="main__customers-column-item-value">
-                    <p>Ronald Richards</p>
-                  </li>
-                  <li class="main__customers-column-item-value">
-                    <p>Marvin McKinney</p>
-                  </li>
-                  <li class="main__customers-column-item-value">
-                    <p>Jerome Bell</p>
-                  </li>
-                  <li class="main__customers-column-item-value">
-                    <p>Kathryn Murphy</p>
-                  </li>
-                  <li class="main__customers-column-item-value">
-                    <p>Jacob Jones</p>
-                  </li>
-                  <li class="main__customers-column-item-value">
-                    <p>Kristin Watson</p>
-                  </li>
-                </ul>
-              </li>
-              <li class="main__customers-column-values">
-                <ul class="list">
-                  <li class="main__customers-column-item-value">
-                    <p>Microsoft</p>
-                  </li>
-                  <li class="main__customers-column-item-value">
-                    <p>Yahoo</p>
-                  </li>
-                  <li class="main__customers-column-item-value">
-                    <p>Adobe</p>
-                  </li>
-                  <li class="main__customers-column-item-value">
-                    <p>Tesla</p>
-                  </li>
-                  <li class="main__customers-column-item-value">
-                    <p>Google</p>
-                  </li>
-                  <li class="main__customers-column-item-value">
-                    <p>Microsoft</p>
-                  </li>
-                  <li class="main__customers-column-item-value">
-                    <p>Yahoo</p>
-                  </li>
-                  <li class="main__customers-column-item-value">
-                    <p>Facebook</p>
-                  </li>
-                </ul>
-              </li>
-              <li class="main__customers-column-values">
-                <ul class="list">
-                  <li class="main__customers-column-item-value">
-                    <p>(225) 555-0118</p>
-                  </li>
-                  <li class="main__customers-column-item-value">
-                    <p>(205) 555-0100</p>
-                  </li>
-                  <li class="main__customers-column-item-value">
-                    <p>(302) 555-0107</p>
-                  </li>
-                  <li class="main__customers-column-item-value">
-                    <p>(252) 555-0126</p>
-                  </li>
-                  <li class="main__customers-column-item-value">
-                    <p>(629) 555-0129</p>
-                  </li>
-                  <li class="main__customers-column-item-value">
-                    <p>(406) 555-0120</p>
-                  </li>
-                  <li class="main__customers-column-item-value">
-                    <p>(208) 555-0112</p>
-                  </li>
-                  <li class="main__customers-column-item-value">
-                    <p>(704) 555-0127</p>
-                  </li>
-                </ul>
-              </li>
-              <li class="main__customers-column-values">
-                <ul class="list">
-                  <li class="main__customers-column-item-value">
-                    <p>jane@microsoft.com</p>
-                  </li>
-                  <li class="main__customers-column-item-value">
-                    <p>floyd@yahoo.com</p>
-                  </li>
-                  <li class="main__customers-column-item-value">
-                    <p>ronald@adobe.com</p>
-                  </li>
-                  <li class="main__customers-column-item-value">
-                    <p>marvin@tesla.com</p>
-                  </li>
-                  <li class="main__customers-column-item-value">
-                    <p>jerome@google.com</p>
-                  </li>
-                  <li class="main__customers-column-item-value">
-                    <p>kathryn@microsoft.com</p>
-                  </li>
-                  <li class="main__customers-column-item-value">
-                    <p>jacob@yahoo.com</p>
-                  </li>
-                  <li class="main__customers-column-item-value">
-                    <p>kristin@facebook.com</p>
-                  </li>
-                </ul>
-              </li>
-              <li class="main__customers-column-values">
-                <ul class="list">
-                  <li class="main__customers-column-item-value">
-                    <p>United States</p>
-                  </li>
-                  <li class="main__customers-column-item-value">
-                    <p>Kiribati</p>
-                  </li>
-                  <li class="main__customers-column-item-value">
-                    <p>Israel</p>
-                  </li>
-                  <li class="main__customers-column-item-value"><p>Iran</p></li>
-                  <li class="main__customers-column-item-value">
-                    <p>Réunion</p>
-                  </li>
-                  <li class="main__customers-column-item-value">
-                    <p>Curaçao</p>
-                  </li>
-                  <li class="main__customers-column-item-value">
-                    <p>Brazil</p>
-                  </li>
-                  <li class="main__customers-column-item-value">
-                    <p>Åland Islands</p>
-                  </li>
-                </ul>
-              </li>
-              <li class="main__customers-column-values">
-                <ul class="list">
-                  <li class="main__customers-column-item-value">
-                    <p>Active</p>
-                  </li>
-                  <li class="main__customers-column-item-value">
-                    <p>Inactive</p>
-                  </li>
-                  <li class="main__customers-column-item-value">
-                    <p>Inactive</p>
-                  </li>
-                  <li class="main__customers-column-item-value">
-                    <p>Active</p>
-                  </li>
-                  <li class="main__customers-column-item-value">
-                    <p>Active</p>
-                  </li>
-                  <li class="main__customers-column-item-value">
-                    <p>Active</p>
-                  </li>
-                  <li class="main__customers-column-item-value">
-                    <p>Active</p>
-                  </li>
-                  <li class="main__customers-column-item-value">
-                    <p>Inactive</p>
-                  </li>
-                </ul>
-              </li>
-            </ul>
+              <tbody>
+                <tr class="main__customers-table-item">
+                  <td>Jane Cooper</td>
+                  <td>Microsoft</td>
+                  <td>(225) 555-0118</td>
+                  <td>jane@microsoft.com</td>
+                  <td>United States</td>
+                  <td class="main__customers-table-item_active">Active</td>
+                </tr>
+
+                <tr class="main__customers-table-item">
+                  <td>Floyd Miles</td>
+                  <td>Yahoo</td>
+                  <td>(205) 555-0100</td>
+                  <td>floyd@yahoo.com</td>
+                  <td>Kiribati</td>
+                  <td class="main__customers-table-item_inactive">Inactive</td>
+                </tr>
+
+                <tr class="main__customers-table-item">
+                  <td>Ronald Richards</td>
+                  <td>Adobe</td>
+                  <td>(302) 555-0107</td>
+                  <td>ronald@adobe.com</td>
+                  <td>Israel</td>
+                  <td class="main__customers-table-item_inactive">Inactive</td>
+                </tr>
+
+                <tr class="main__customers-table-item">
+                  <td>Marvin McKinney</td>
+                  <td>Tesla</td>
+                  <td>(252) 555-0126</td>
+                  <td>marvin@tesla.com</td>
+                  <td>Iran</td>
+                  <td class="main__customers-table-item_active">Active</td>
+                </tr>
+
+                <tr class="main__customers-table-item">
+                  <td>Jerome Bell</td>
+                  <td>Google</td>
+                  <td>(629) 555-0129</td>
+                  <td>jerome@google.com</td>
+                  <td>Réunion</td>
+                  <td class="main__customers-table-item_active">Active</td>
+                </tr>
+
+                <tr class="main__customers-table-item">
+                  <td>Kathryn Murphy</td>
+                  <td>Microsoft</td>
+                  <td>(406) 555-0120</td>
+                  <td>kathryn@microsoft.com</td>
+                  <td>Curaçao</td>
+                  <td class="main__customers-table-item_active">Active</td>
+                </tr>
+
+                <tr class="main__customers-table-item">
+                  <td>Jacob Jones</td>
+                  <td>Yahoo</td>
+                  <td>(208) 555-0112</td>
+                  <td>jacob@yahoo.com</td>
+                  <td>Brazil</td>
+                  <td class="main__customers-table-item_active">Active</td>
+                </tr>
+
+                <tr class="main__customers-table-item">
+                  <td>Kristin Watson</td>
+                  <td>Facebook</td>
+                  <td>(704) 555-0127</td>
+                  <td>kristin@facebook.com</td>
+                  <td>Åland Islands</td>
+                  <td class="main__customers-table-item_inactive">Inactive</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
 
           <div class="main__customers-footer">
@@ -306,31 +231,35 @@
 
             <ul class="main__pagination list">
               <li class="main__pagination-item">
-                <button class="main__pagination-btn">
-                  <svg>
+                <button class="main__pagination-btn button">
+                  <svg class="main__pagination-left-icon">
                     <use href="./images/sprite.svg#page-left-icon"></use>
                   </svg>
                 </button>
               </li>
               <li class="main__pagination-item">
-                <button class="main__pagination-btn">1</button>
+                <button
+                  class="main__pagination-btn main__pagination-btn_current button"
+                >
+                  1
+                </button>
               </li>
               <li class="main__pagination-item">
-                <button class="main__pagination-btn">2</button>
+                <button class="main__pagination-btn button">2</button>
               </li>
               <li class="main__pagination-item">
-                <button class="main__pagination-btn">3</button>
+                <button class="main__pagination-btn button">3</button>
               </li>
               <li class="main__pagination-item">
-                <button class="main__pagination-btn">4</button>
+                <button class="main__pagination-btn button">4</button>
               </li>
               <li class="main__pagination-item">...</li>
               <li class="main__pagination-item">
-                <button class="main__pagination-btn">40</button>
+                <button class="main__pagination-btn button">40</button>
               </li>
               <li class="main__pagination-item">
-                <button class="main__pagination-btn">
-                  <svg>
+                <button class="main__pagination-btn button">
+                  <svg class="main__pagination-right-icon">
                     <use href="./images/sprite.svg#page-right-icon"></use>
                   </svg>
                 </button>
@@ -340,5 +269,7 @@
         </div>
       </div>
     </section>
+
+    <script src="./index.js"></script>
   </body>
 </html>

@@ -1,6 +1,7 @@
 body {
     background-color: #E7E7E7;
-    // font-family: 'Roboto';
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -12,6 +13,11 @@ ul {
     margin-top: 0;
     margin-bottom: 0;
     padding-left: 0;
+}
+
+th {
+    font-weight: normal;
+    padding-bottom: 14px;
 }
 
 .img {
@@ -29,7 +35,7 @@ ul {
 }
 
 .button {
-    // font-family: inherit;
+    font-family: inherit;
     cursor: pointer;
     border: none;
 }
