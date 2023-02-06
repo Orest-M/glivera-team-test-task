@@ -1,25 +1,14 @@
-.main__customers-footer {
-  display: flex;
-  align-items: center;
-}
-
 .main__showing-data {
   font-weight: 500;
   font-size: 14px;
   line-height: 21px;
   letter-spacing: -0.01em;
   color: #B5B7C0;
-
-  margin-left: 38px;
 }
 
 .main__pagination {
   display: flex;
   gap: 12px;
-  margin-top: 30px;
-  margin-bottom: 40px;
-  margin-left: auto;
-  margin-right: 40px;
 }
 
 .main__pagination-btn {
@@ -43,11 +32,12 @@
 
   transition: var(--primary-transition);
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     background-color: var(--color-contrast);
     border: 1px solid var(--color-contrast);
     border-radius: 4px;
-    
+
     color: #FFFFFF;
   }
 }
@@ -56,17 +46,49 @@
   background-color: var(--color-contrast);
   border: 1px solid var(--color-contrast);
   border-radius: 4px;
-
   color: #FFFFFF;
 }
 
-.main__pagination-left-icon, .main__pagination-right-icon {
+.main__pagination-left-icon,
+.main__pagination-right-icon {
   width: 8px;
   height: 12px;
   fill: #404B52;
   transition: var(--primary-transition);
 
-  .main__pagination-btn:hover &, .main__pagination-btn:focus & {
+  .main__pagination-btn:hover &,
+  .main__pagination-btn:focus & {
     fill: #FFFFFF;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .main__showing-data {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+
+  .main__pagination {
+    justify-content: center;
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .main__customers-footer {
+    display: flex;
+    align-items: center;
+  }
+
+  .main__showing-data {
+    margin-left: 38px;
+  }
+
+  .main__pagination {
+    margin-top: 30px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: 40px;
   }
 }

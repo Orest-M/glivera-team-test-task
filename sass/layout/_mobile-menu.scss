@@ -1,0 +1,144 @@
+.mobile-menu__div {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  opacity: 1;
+}
+
+.mobile-menu__close-btn {
+  background-color: inherit;
+  border: none;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.mobile-menu__close-btn-icon {
+  height: 20px;
+  width: 20px;
+}
+
+.mobile-menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 50px;
+}
+
+.mobile-menu__list-item {
+  width: 250px;
+  height: 46px;
+  background: inherit;
+  border-radius: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: var(--primary-transition);
+  &:is(:hover, :focus) {
+    background-color: var(--color-contrast);
+  }
+}
+
+.mobile-menu__list-item_pushed {
+  background-color: var(--color-contrast);
+  & .mobile-menu__list-text {
+    color: #fff;
+  }
+  & .mobile-menu__list-icon,
+  & .mobile-menu__list-arrow {
+    fill: #fff;
+    stroke: #fff;
+  }
+}
+
+.mobile-menu__list-link {
+  width: 250px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.mobile-menu__list-icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin-left: 11px;
+  fill: #9197b3;
+  stroke: #9197b3;
+  transition: var(--primary-transition);
+
+  .mobile-menu__list-item:focus & {
+    fill: #fff;
+    stroke: #fff;
+  }
+}
+
+.mobile-menu__list-text {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: -0.01em;
+  color: #9197B3;
+  margin-left: 14px;
+  transition: var(--primary-transition);
+
+  .mobile-menu__list-item:focus & {
+    color: #fff;
+  }
+}
+
+.mobile-menu__list-arrow {
+  display: block;
+  width: 16px;
+  height: 16px;
+  margin-left: auto;
+  margin-right: 8px;
+  fill: #9197b3;
+  stroke: #9197b3;
+  transition: var(--primary-transition);
+
+  .mobile-menu__list-item:focus & {
+    fill: #fff;
+    stroke: #fff;
+  }
+}
+
+.mobile-menu__user {
+  position: absolute;
+  bottom: 30px;
+  margin-left: 30px;
+}
+
+.mobile-menu__user-link {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.mobile-menu__user-photo {
+  height: 60px;
+  width: 60px;
+}
+
+.mobile-menu__user-name {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 21px;
+  letter-spacing: 0.01em;
+  color: var(--dark-text-color);
+  padding-bottom: 7px;
+}
+
+.mobile-menu__user-position {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: 0.01em;
+  color: #757575;
+}

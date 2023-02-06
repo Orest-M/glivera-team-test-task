@@ -2,7 +2,25 @@
   background: #FFFFFF;
   box-shadow: 0px 10px 60px rgba(226, 236, 249, 0.5);
   border-radius: 30px;
-  margin-left: 71px;
-  margin-top: 51px;
-  margin-bottom: 258px;
 }
+
+@media screen and (max-width: 767px) {
+  .main__customers {
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 30px;
+    margin-bottom: 100px;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .main__customers {
+    background: #FFFFFF;
+    box-shadow: 0px 10px 60px rgba(226, 236, 249, 0.5);
+    border-radius: 30px;
+    margin-left: 71px;
+    margin-top: 51px;
+    margin-bottom: 258px;
+  }
+}
+
